@@ -12,7 +12,7 @@ const ReactionSchema = new Schema (
         reactionBody: {
             type: String,
             required: true,
-            match: /^[a-z][0-9][A-Z]{1,280}$/
+            // match: /^[a-z][0-9][A-Z]{1,280}$/
         },
         username: {
             type: String,
@@ -34,7 +34,7 @@ const ThoughtSchema = new Schema(
         thoughtText: {
             type: String,
             required: true,
-            match: /^[a-z][0-9][A-Z]{1,280}$/
+            // match: /^[a-z][0-9][A-Z]{1,280}$/
         },
         createdAt: {
             type: Date,
