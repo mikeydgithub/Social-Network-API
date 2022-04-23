@@ -1,8 +1,34 @@
 // import dependancies
-const { Thought, model } = require('mongoose');
+const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
-// create the schema for the model
+// create the ReactionSchema for the model
+const ReactionSchema = new Schema (
+    {
+        reactionId: {
+        type: Schema.Types.ObjectId,
+        default: () => new Types.ObjectId()
+        },
+        reactionBody: {
+            type: String,
+            required: true,
+            match: /^[a-z][0-9][A-Z]{1,280}$/
+        },
+        username: {
+            type: String,
+            required: true
+        },
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: (createdAtVal) => dateFormat(createdAtVal)
+        }
+    }
+)
+
+
+
+// create the ThoughtSchema for the model
 const ThoughtSchema = new Schema(
     {
         thoughtText: {
@@ -30,10 +56,11 @@ const ThoughtSchema = new Schema(
     }
 );
 
-reactionCount.virtual('reactionCount').get(function() {
-    return this.replies.length;
+
+ThoughtSchema.virtual('reactionCount').get(function() {
+    return this.reactions.length;
 });
 
 
-const Thought = model ('User', ThoughtSchema)
+const Thought = model ('Thought', ThoughtSchema)
 module.exports = Thought
