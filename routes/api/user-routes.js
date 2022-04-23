@@ -5,10 +5,16 @@ const {
     getUserById, 
     createUser, 
     updateUser, 
-    deleteUser
+    deleteUser,
+    addFriend,
+    deleteFriend
 } = require('../../controllers/user-controller')
 
-// Setup GET all and POST at /api/pizzas
+// Setup GET all and POST at /api/id/friends/:friendid
+router
+.route('/:id/friends/:friendid')
+.post(addFriend)
+.delete(deleteFriend)
 
 router
 .route('/')

@@ -1,7 +1,6 @@
 // functionality inside the controller 
 
 // handle user model updates
-const res = require('express/lib/response');
 const { User, Thought } = require('../models');
 
 // the functions will go in here as methods
@@ -72,6 +71,40 @@ const userController = {
             return;
         }
         res.json(dbThoughtData);
+        })
+        .catch(err => res.json(err)); 
+    },
+
+    // add friend
+    addFriend({ params }, res) {
+        User.findByIdAndUpdate(
+        {_id: params.id },
+        { $push: { friends: params.friendid }},
+        {new: true}
+        )
+        .then(dbFriendData => {
+        if (!dbFriendData) {
+            res.status(404).json({ message: 'No friend found with this id!' });
+            return;
+        }
+        res.json(dbFriendData);
+        })
+        .catch(err => res.json(err)); 
+    },
+
+    // delete a friend
+    deleteFriend({ params }, res) {
+        User.findByIdAndUpdate(
+        {_id: params.id },
+        { $pull: { friends: params.friendid }},
+        {new: true}
+        )
+        .then(dbFriendData => {
+        if (!dbFriendData) {
+            res.status(404).json({ message: 'No friend found with this id!' });
+            return;
+        }
+        res.json(dbFriendData);
         })
         .catch(err => res.json(err)); 
     }
