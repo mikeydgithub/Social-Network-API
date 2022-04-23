@@ -19,12 +19,18 @@ const ThoughtSchema = new Schema(
             type: String,
             required: true,
         },
-        reactions: [ReactionSchema]
-        
+        reactions: [ReactionSchema] 
+    },
+    {
+        toJSON: {
+            virtuals: true,
+            getters: true
+        },
+        id: false
     }
 );
 
-reactionSchema.virtual('reactionCount').get(function() {
+reactionCount.virtual('reactionCount').get(function() {
     return this.replies.length;
 });
 
