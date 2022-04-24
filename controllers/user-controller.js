@@ -54,7 +54,7 @@ const userController = {
 
     // delete a user
     deleteUser({ params }, res) {
-        User.findOneAndDelete({_id: params.id})
+        User.findOneAndDelete({ _id: params.id })
         .then(dbUserData => {
             console.log(dbUserData);
             if(!dbUserData) {

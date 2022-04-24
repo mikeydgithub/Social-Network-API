@@ -10,7 +10,7 @@ const {
     deleteFriend
 } = require('../../controllers/user-controller')
 
-// Setup GET all and POST at /api/id/friends/:friendid
+// Setup GET all and POST at /api/users/<usersid>/friends/<friendid>
 router
 .route('/:id/friends/:friendid')
 .post(addFriend)

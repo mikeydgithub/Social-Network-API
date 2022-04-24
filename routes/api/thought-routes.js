@@ -3,24 +3,32 @@ const router = require('express').Router();
 const { 
     getAllThought, 
     getThoughtById, 
-    createThought, 
+    addThought, 
     updateThought, 
     deleteThought,
     addReaction,
     deleteReaction
 } = require('../../controllers/thought-controller')
 
+
+// path for reactions
 router
-.route('/thoughts/:id/reactions')
+.route('/:thoughtid/reactions')
 .post(addReaction)
+
+// path for reactions
+router
+.route('/thought:id/reactions/:reactionsid')
 .delete(deleteReaction)
 
+
+// path for thoughts
 router
 .route('/')
 .get(getAllThought)
-.post(createThought);
+.post(addThought);
 
-// Set up GET, PUT, and DELETE at /api/thoughts/:id
+// Set up GET, PUT, and DELETE at /api/thoughts/<id>
 router
 .route('/:id')
 .get(getThoughtById)

@@ -9,7 +9,7 @@ const ReactionSchema = new Schema (
         type: Schema.Types.ObjectId,
         default: () => new Types.ObjectId()
         },
-        reactionBody: {
+        reactionText: {
             type: String,
             required: true,
             // match: /^[a-z][0-9][A-Z]{1,280}$/
