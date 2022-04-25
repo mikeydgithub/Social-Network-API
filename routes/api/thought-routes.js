@@ -13,12 +13,12 @@ const {
 
 // path for creating reactions
 router
-.route('/:thoughtid/reactions')
+.route('/:thoughtId/reactions')
 .post(addReaction)
 
 // path for deleting reactions
 router
-.route('/:thoughtid/reactions/:reactionsId')
+.route('/:thoughtId/reactions/:reactionsId')
 .delete(deleteReaction)
 
 
