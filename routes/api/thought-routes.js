@@ -11,14 +11,14 @@ const {
 } = require('../../controllers/thought-controller')
 
 
-// path for reactions
+// path for creating reactions
 router
-.route('/reactions/:thoughtid')
+.route('/:thoughtid/reactions')
 .post(addReaction)
 
-// path for reactions
+// path for deleting reactions
 router
-.route('/:thoughtid/reactions/:reactionId')
+.route('/:thoughtid/reactions/:reactionsId')
 .delete(deleteReaction)
 
 
