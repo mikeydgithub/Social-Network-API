@@ -18,7 +18,7 @@ router
 
 // path for deleting reactions
 router
-.route('/:thoughtId/reactions/:reactionsId')
+.route('/:thoughtId/reactions/:reactionId')
 .delete(deleteReaction)
 
 
