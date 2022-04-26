@@ -64,10 +64,10 @@ const thoughtController = {
     },
     
     // add a reaction to thought
-    addReaction({ params }, res) {
+    addReaction({ params, body }, res) {
         Thought.findByIdAndUpdate (
             { _id: params.thoughtId },
-            { $push: { reactions: params.body } },
+            { $push: { reactions: body } },
             { new: true }
         )
 
@@ -82,14 +82,16 @@ const thoughtController = {
     },
 
     // delete a reaction
-    deleteReaction({ params, body }, req, res) {
-        Thought.findByIdAndUpdate(req.params.id,
-            { $pull: { reactions: reactionId }, body },
+    deleteReaction({ params, body }, res) {
+        Thought.findByIdAndUpdate (
+            { _id: params.reactionsId },
+            { $pull: { reactions: body } },
             { new: true }
         )
+
         .then(dbThoughtData => {
         if (!dbThoughtData) {
-            res.status(404).json({ message: 'No user found with this id!' });
+            res.status(404).json({ message: 'No thought found with this id!' });
             return;
         }
         res.json(dbThoughtData);
