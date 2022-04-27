@@ -23,7 +23,8 @@
 
   * Make sure you are in the root folder directory. In the command line type "npm install" to install all node packages.
   
-   ![Screenshot 2022-03-19 170227](https://user-images.githubusercontent.com/94988620/159138322-6956eef5-1844-4b5a-8508-09434aacf16f.jpg)
+  ![Screenshot 2022-04-27 113015](https://user-images.githubusercontent.com/94988620/165555208-e160cdc2-6951-4ce9-883b-09789432edb1.png)
+
 
   * In the command line type "npm start" to get the Mongoose server started.
   
@@ -34,7 +35,7 @@
   * Start by using npm start to start the server.
    ![Screenshot 2022-03-19 171131](https://user-images.githubusercontent.com/94988620/159138525-6c1e5332-fc7a-4de4-bc16-e29e34544334.jpg)
   
-  * Run with Insomnia or Postman and test all routes for Categories, Products, and Tags.
+  * Run with Insomnia or Postman and test all routes for Users, Friends, Thoughts, and Reactions.
   
   ![Screenshot 2022-03-19 171401](https://user-images.githubusercontent.com/94988620/159138590-38510e8d-befb-4173-be24-60c59633084d.jpg)
 
