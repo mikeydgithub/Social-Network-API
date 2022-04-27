@@ -25,7 +25,9 @@
   
    ![Screenshot 2022-03-19 170227](https://user-images.githubusercontent.com/94988620/159138322-6956eef5-1844-4b5a-8508-09434aacf16f.jpg)
 
-  * In the command line type "npm start" to login. Follow up with your password. 
+  * In the command line type "npm start" to get the Mongoose server started.
+  
+  ![Screenshot 2022-04-27 112752](https://user-images.githubusercontent.com/94988620/165555045-b637a52f-b235-4d28-a960-649d65d32edb.png)
   
 
   ## Tests
