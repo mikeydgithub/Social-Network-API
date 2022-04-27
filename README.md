@@ -21,7 +21,7 @@
 
   ## Installation
   
-  * First make sure you have MongoDB installed. You can get it from there website. 
+  * First make sure you have MongoDB installed. You can get it from their website. 
 
   https://www.mongodb.com/try/download/community
 
