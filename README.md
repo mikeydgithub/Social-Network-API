@@ -20,20 +20,26 @@
   * Make GET, POST, PUT, and DELETE requests from the database.
 
   ## Installation
+  
+  * First make sure you have MongoDB installed. You can get it from there website. 
+
+  
 
   * Make sure you are in the root folder directory. In the command line type "npm install" to install all node packages.
   
   ![Screenshot 2022-04-27 113015](https://user-images.githubusercontent.com/94988620/165555208-e160cdc2-6951-4ce9-883b-09789432edb1.png)
-
-
-  * In the command line type "npm start" to get the Mongoose server started.
   
-  ![Screenshot 2022-04-27 112752](https://user-images.githubusercontent.com/94988620/165555045-b637a52f-b235-4d28-a960-649d65d32edb.png)
+  * Packages that will be installed are express and mongoose. 
+  
+  ![Screenshot 2022-04-27 113238](https://user-images.githubusercontent.com/94988620/165555720-2aa71671-dc2e-4417-943c-98b0f8f4d520.png)
   
 
   ## Tests
-  * Start by using npm start to start the server.
-   ![Screenshot 2022-03-19 171131](https://user-images.githubusercontent.com/94988620/159138525-6c1e5332-fc7a-4de4-bc16-e29e34544334.jpg)
+  
+  * In the command line type "npm start" to get the Mongoose server started.
+  
+  ![Screenshot 2022-04-27 112752](https://user-images.githubusercontent.com/94988620/165555045-b637a52f-b235-4d28-a960-649d65d32edb.png)
+
   
   * Run with Insomnia or Postman and test all routes for Users, Friends, Thoughts, and Reactions.
   
