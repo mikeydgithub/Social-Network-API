@@ -23,7 +23,7 @@
   
   * First make sure you have MongoDB installed. You can get it from there website. 
 
-  
+  https://www.mongodb.com/try/download/community
 
   * Make sure you are in the root folder directory. In the command line type "npm install" to install all node packages.
   
