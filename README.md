@@ -43,9 +43,13 @@
   
   * Run with Insomnia or Postman and test all routes for Users, Friends, Thoughts, and Reactions.
   
-  ![Screenshot 2022-03-19 171401](https://user-images.githubusercontent.com/94988620/159138590-38510e8d-befb-4173-be24-60c59633084d.jpg)
-
+  ![Screenshot 2022-04-27 113720](https://user-images.githubusercontent.com/94988620/165556728-9dfb1df8-722e-42e5-852d-a77bf5f9a9e4.png)
   
+  ![Screenshot 2022-04-27 113813](https://user-images.githubusercontent.com/94988620/165556915-ac05f04d-7240-4371-9ae5-1d0ab6779ac8.png)
+  
+  ![Screenshot 2022-04-27 113906](https://user-images.githubusercontent.com/94988620/165557130-fff70691-83c2-4cd0-bcc8-c67949eff4e9.png)
+
+
   ## User Story
 
   AS A manager at an internet retail company
