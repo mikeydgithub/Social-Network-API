@@ -58,7 +58,19 @@
 
   ## Description
 
-  Retail Pro is an E-Commerce back end development tool using packages like Sequelize to help make a database easy and convienant. 
+  Given a social network API
+  
+  * When you enter the command to invoke the application,
+  * Then your server is started and the Mongoose models are synced to the MongoDB database.
+
+  * When you open API GET routes in Insomnia for users and thoughts,
+  * Then the data for each of these routes is displayed in a formatted JSON
+
+  * When you test API POST, PUT, and DELETE routes in Insomnia,
+  * Then you are able to successfully create, update, and delete users and thoughts in your database
+
+  * When you test API POST and DELETE routes in Insomnia,
+  * Then you are able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
 
   ## GitHub Username
     
@@ -73,5 +85,5 @@
   ampgzo2@gmail.com
 
   ## Walk through Video
-  [https://drive.google.com/file/d/11fAycClqzQcxHPayJi3i8_DSCS3C4arf/view]
+  https://drive.google.com/file/d/1OFj_6gz1qiyXBNLN2nibw8t_0xptBIkK/view
   
