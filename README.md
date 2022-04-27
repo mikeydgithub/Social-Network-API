@@ -52,9 +52,9 @@
 
   ## User Story
 
-  AS A manager at an internet retail company
-  I WANT a back end for my e-commerce website that uses the latest technologies
-  SO THAT my company can compete with other e-commerce companies
+  AS A social media startup
+  I WANT an API for my social network that uses a NoSQL database
+  SO THAT my website can handle large amounts of unstructured data
 
   ## Description
 
