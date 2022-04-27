@@ -47,9 +47,8 @@ const thoughtController = {
         Thought.findOneAndUpdate (
             { _id: params.id }, body, 
             { new: true, runvalidater: true }
-            )
-        .populate({path: 'reactions', select: '-__v'})
-        .select('-___v')
+        )
+
         .then(dbThoughtData => {
             if(!dbThoughtData) {
                 res.status(404).json({message:'No thought found with this id!'});
@@ -64,15 +63,16 @@ const thoughtController = {
     deleteThought({ params }, res) {
         Thought.findOneAndDelete (
             { _id: params.id }
-            )
+        )
+
         .then(dbThoughtData => {
             if (!dbThoughtData) {
                 res.status(404).json({ message: 'No thought found with this id!' });
                 return;
             }
             res.json(dbThoughtData);
-            })
-            .catch(err => res.json(err));
+        })
+        .catch(err => res.json(err));
     },
     
     // add a reaction to thought
@@ -81,16 +81,14 @@ const thoughtController = {
             { _id: params.thoughtId },
             { $push: { reactions: body } },
             { new: true }
-        .populate({path: 'reactions', select: '-__v'})
-        .select('-__v')
         )
 
         .then(dbThoughtData => {
-        if (!dbThoughtData) {
-            res.status(404).json({ message: 'No thought found with this id!' });
-            return;
-        }
-        res.json(dbThoughtData);
+            if (!dbThoughtData) {
+                res.status(404).json({ message: 'No thought found with this id!' });
+                return;
+            }
+            res.json(dbThoughtData);
         })
         .catch(err => res.json(err)); 
     },
